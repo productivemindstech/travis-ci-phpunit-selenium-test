@@ -18,7 +18,7 @@ tar xvjf $firefoxFile
 echo "Starting xvfb"
 echo "Starting Selenium"
 if [ ! -f $serverFile ]; then
-    wget http://selenium.googlecode.com/files/$serverFile
+    wget https://repo.jenkins-ci.org/releases/org/seleniumhq/selenium/selenium-server-standalone/2.35.0/$serverFile
 fi
 sudo xvfb-run java -jar $serverFile > /tmp/selenium.log &
 
